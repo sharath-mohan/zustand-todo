@@ -19,7 +19,11 @@ function Todo(props: ITodo) {
         checked={props.isCompleted}
         onChange={(e) => toggleTodoHandler(props.id)}
       />
-      {props.item}
+      <p
+        style={{ textDecoration: props.isCompleted ? "line-through" : "none" }}
+      >
+        {props.item}
+      </p>
       <button onClick={() => deleteTodoHandler(props.id)}>Delete</button>
     </div>
   );
