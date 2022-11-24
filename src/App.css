@@ -1,0 +1,48 @@
+header {
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 3rem 0;
+  text-align: center;
+}
+.add-todo {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+.add-todo > form > input {
+  padding: 1rem;
+  background-color: whitesmoke;
+  border: 1px #ccc solid;
+  border-radius: 4px 0 0 4px;
+}
+.add-todo > form > input:focus {
+  outline: none;
+  border: 1px solid teal;
+}
+.add-todo > form > button {
+  padding: 1rem;
+  background-color: teal;
+  border: 1px teal solid;
+  border-radius: 0 4px 4px 0;
+  color: white;
+  font-weight: 700;
+}
+.todo {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  background-color: #eee;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  align-items: center;
+}
+.todo > button {
+  background-color: #ccc;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
