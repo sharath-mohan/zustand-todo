@@ -2,8 +2,8 @@ import create from "zustand";
 import { devtools, persist } from "zustand/middleware";
 export interface ITodo {
   id: string;
-  isCompleted: boolean;
-  item: string;
+  completed: boolean;
+  title: string;
 }
 interface TodoState {
   todos: ITodo[];
@@ -24,12 +24,12 @@ export const useTodoStore = create<TodoState>()(
         toggleStatus: (id) =>
           set((state) => ({
             todos: state.todos.map((el) =>
-              el.id === id ? { ...el, isCompleted: !el.isCompleted } : el
+              el.id === id ? { ...el, completed: !el.completed } : el
             ),
           })),
       }),
       { name: "todos" }
     ),
-    { name: "todos" }
+    { name: "todos", enabled: true }
   )
 );

@@ -9,8 +9,8 @@ function AddTodo() {
     console.log(todo);
     addTodo({
       id: nanoid(),
-      item: todo,
-      isCompleted: false,
+      title: todo,
+      completed: false,
     });
     setTodo("");
   };

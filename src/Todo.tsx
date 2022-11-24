@@ -16,13 +16,11 @@ function Todo(props: ITodo) {
         type="checkbox"
         name="isCompleted"
         id={`${props.id}-checkbox`}
-        checked={props.isCompleted}
+        checked={props.completed}
         onChange={(e) => toggleTodoHandler(props.id)}
       />
-      <p
-        style={{ textDecoration: props.isCompleted ? "line-through" : "none" }}
-      >
-        {props.item}
+      <p style={{ textDecoration: props.completed ? "line-through" : "none" }}>
+        {props.title}
       </p>
       <button onClick={() => deleteTodoHandler(props.id)}>Delete</button>
     </div>
